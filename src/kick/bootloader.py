@@ -4,8 +4,8 @@ import _thread
 
 
 print('Loading Permission module......')
-for i in range(100):
-    print('|',end='')
+for i in range(10):
+    print('|'*10,end='')
     _thread.start_new_thread(kernel.run,())
     time.sleep(3.5)
 print('\n Done!')
