@@ -13,7 +13,7 @@ def message_got(chat, message, sender):
 
 webapp = flask.Flask(__name__)
 webapp.config['JSON_AS_ASCII'] = False
-webapp.json.ensure_ascii = Flase
+webapp.json.ensure_ascii = False
 @webapp.route('/')
 def root():
     return {"code":200}
