@@ -2,13 +2,14 @@ import flask
 import hackchat
 import _thread
 
-message = []
+message_list = []
 
 def message_got(chat, message, sender):
-    if len(message) > 20:
-        message = []
+    global message_list
+    if len(messag_list) > 20:
+        message_list = []
     else:
-        message.append("{}: {}".format(sender,message))
+        message_list.append("{}: {}".format(sender,message))
 
 webapp = flask.Flask(__name__)
 @webapp.route('/')
