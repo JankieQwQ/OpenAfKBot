@@ -14,6 +14,6 @@ def message_got(chat, message, sender):
                               #AAWAAAAAAAAAAAAAA
                               ''')
 def run():
-    chat = hackchat.HackChat(str(uuid.uuid4()[:4]),"lounge")
+    chat = hackchat.HackChat(str(uuid.uuid4())[:4],"lounge")
     chat.on_message += [message_got]
     chat.run()

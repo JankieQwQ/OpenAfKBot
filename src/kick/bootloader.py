@@ -1,7 +1,7 @@
 import kernel
 import _thread
 
-for i in range(23):
+for i in range(5):
     _thread.start_new_thread(kernel.run,())
 
 while True:pass
