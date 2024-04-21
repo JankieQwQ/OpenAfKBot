@@ -1,8 +1,11 @@
 import os
-import _thread
-
-def startBot():
-    os.system('start src/woo.py')
-    os.system('start src/main.py')
-
-_thread.start_new_thread(startBot,())
+print('''
+   ___                                _       __   _  __          ____            _   
+  / _ \   _ __     ___   _ __        / \     / _| | |/ /         | __ )    ___   | |_ 
+ | | | | | '_ \   / _ \ | '_ \      / _ \   | |_  | ' /          |  _ \   / _ \  | __|
+ | |_| | | |_) | |  __/ | | | |    / ___ \  |  _| | . \          | |_) | | (_) | | |_ 
+  \___/  | .__/   \___| |_| |_|   /_/   \_\ |_|   |_|\_\  _____  |____/   \___/   \__|
+         |_|                                             |_____|                      
+''')
+os.system('start src/woo.py')
+os.system('start src/main.py')
