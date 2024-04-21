@@ -1,1 +1,1 @@
-username = 'AfK_Bot#' + input('Please enter password:')
+username = 'Open_AfK_Bot#' + input('Please enter password:')
