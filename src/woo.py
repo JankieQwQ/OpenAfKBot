@@ -6,7 +6,7 @@ message_list = []
 
 def message_got(chat, message, sender):
     global message_list
-    if len(messag_list) > 20:
+    if len(message_list) > 20:
         message_list = []
     else:
         message_list.append("{}: {}".format(sender,message))
