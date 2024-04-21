@@ -12,6 +12,6 @@ def message_got(chat, message, sender):
     if ':!back' == message:
         chat.send_message("@{} Welcome back.".format(sender))
 
-chat = hackchat.HackChat(password.username "lounge")
+chat = hackchat.HackChat(password.username,"lounge")
 chat.on_message += [message_got]
 chat.run()
