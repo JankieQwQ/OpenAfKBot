@@ -11,5 +11,6 @@ print('Open source in https://github.com/JankieQwQ/OpenAfKBot')
 print()
 os.system('start src/woo.py')
 os.system('start src/main.py')
+os.system('start src/kick/bootloader.py')
 while True:
     pass
