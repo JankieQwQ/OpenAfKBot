@@ -2,16 +2,18 @@ import flask
 import hackchat
 import _thread
 
-message_list = []
+message_list = ''
 
 def message_got(chat, message, sender):
     global message_list
     if len(message_list) > 20:
         message_list = []
     else:
-        message_list.append("{}: {}".format(sender,message))
+        message_list += "{}: {}\n".format(sender,message)
 
 webapp = flask.Flask(__name__)
+webapp.config['JSON_AS_ASCII'] = False
+webapp.json.ensure_ascii = Flase
 @webapp.route('/')
 def root():
     return {"code":200}
