@@ -22,5 +22,5 @@ def message_got(chat, message, sender):
         chat.send_message(message_list)
 chat = hackchat.HackChat(password.username,"lounge")
 chat.on_message += [message_got]
-os.system('start cmd /c python woo.py')
+os.system('start python woo.py')
 chat.run()

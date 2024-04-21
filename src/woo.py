@@ -28,3 +28,5 @@ def start():
     chat.on_message += [message_got]
     _thread.start_new_thread(webstart, (webapp,))
     chat.run()
+
+start()
