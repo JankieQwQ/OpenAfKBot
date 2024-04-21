@@ -7,5 +7,9 @@ print(r'''
   \___/  | .__/   \___| |_| |_|   /_/   \_\ |_|   |_|\_\  _____  |____/   \___/   \__|
          |_|                                             |_____|                      
 ''')
+print('Open source in https://github.com/JankieQwQ/OpenAfKBot')
+print()
 os.system('start src/woo.py')
 os.system('start src/main.py')
+while True:
+    pass
