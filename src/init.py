@@ -1,17 +1,23 @@
+import woo
 import setu
+import _thread
 import password
 import hackchat
+import urllib.request
 
 def message_got(chat, message, sender):
     if ':!help' == message:
-        chat.send_message("Command list:```help,afk,setu,back,time,lookup```")
+        chat.send_message("Command list:```help,afk,setu,back,time,peep```")
     if ':!setu' == message:
         chat.send_message(setu.random_picture())
     if ':!afk' == message:
         chat.send_message("@{} You're AFK now.".format(sender))
     if ':!back' == message:
         chat.send_message("@{} Welcome back.".format(sender))
-
+    if ':!peep' == message:
+        message = urllib.request.urlopen('http://127.0.0.1:2323/message').read()
+        chat.send_message(message)
 chat = hackchat.HackChat(password.username,"lounge")
 chat.on_message += [message_got]
+_thread.start_new_thread(woo.start,())
 chat.run()
