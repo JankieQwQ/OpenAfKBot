@@ -26,5 +26,5 @@ def webstart(obj):
 def start():
     chat = hackchat.HackChat("woo","lounge")
     chat.on_message += [message_got]
-    _thread.start_new_thread(webstart, ())
+    _thread.start_new_thread(webstart, (webapp))
     chat.run()
