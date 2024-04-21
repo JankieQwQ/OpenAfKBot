@@ -18,7 +18,7 @@ def root():
 
 @webapp.route('/message')
 def message():
-    return str(message)
+    return str(message_list)
 
 def webstart(obj):
     obj.run(port=2323,host='0.0.0.0')

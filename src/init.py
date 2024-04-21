@@ -16,11 +16,10 @@ def message_got(chat, message, sender):
         chat.send_message("@{} Welcome back.".format(sender))
     if ':!peep' == message:
         try:
-            message_list = urllib.request.urlopen('http://127.0.0.1:2323/message').read()
+            message_list = str(urllib.request.urlopen('http://127.0.0.1:2323/message').read())
         except Exception as e:
             message_list = str(e)
         chat.send_message(message_list)
 chat = hackchat.HackChat(password.username,"lounge")
 chat.on_message += [message_got]
-os.system('start python woo.py')
 chat.run()
