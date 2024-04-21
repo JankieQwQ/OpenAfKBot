@@ -86,7 +86,9 @@ class HackChat:
             time.sleep(60)
 
 import uuid
-with open('owner.txt','r') as f: f.owner = read()
+try:
+    with open('owner.txt','r') as f: f.owner = read()
+except: owner = "aiwLKl"
 def message_got(chat, message, sender,trip):
     if ':!kick' == message[:5] and trip == owner:
         x = message[5:]
