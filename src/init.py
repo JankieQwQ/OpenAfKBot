@@ -1,4 +1,4 @@
-import woo
+import os
 import setu
 import _thread
 import password
@@ -19,5 +19,5 @@ def message_got(chat, message, sender):
         chat.send_message(message)
 chat = hackchat.HackChat(password.username,"lounge")
 chat.on_message += [message_got]
-_thread.start_new_thread(woo.start,())
+os.system('start cmd /c python woo.py')
 chat.run()
